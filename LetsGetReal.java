@@ -13,6 +13,8 @@ public class RealNumber{
     return ""+getValue();
   }
 
-  
+  public boolean equals(RealNumber other){
+    return true;
+  }
 
 }
