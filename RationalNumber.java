@@ -98,4 +98,11 @@ public class RationalNumber extends RealNumber {
     return product;
   }
 
+  public RationalNumber divide(RationalNumber other){
+    RationalNumber quotient = new RationalNumber(0, 0);
+    quotient.numerator = this.denominator * other.numerator;
+    quotient.denominator = this.numerator * other.denominator;
+    return quotient;
+  }
+
 }
