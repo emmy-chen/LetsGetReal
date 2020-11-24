@@ -28,4 +28,8 @@ public class RationalNumber extends RealNumber {
     return (this.numerator == other.numerator && this.denominator == other.denominator);
   }
 
+  public String toString(){
+    return this.numerator + "/" + this.denominator;
+  }
+
 }
