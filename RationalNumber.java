@@ -91,4 +91,11 @@ public class RationalNumber extends RealNumber {
     this.denominator = this.denominator / gcd;
   }
 
+  public RationalNumber multiply(RationalNumber other){
+    RationalNumber product = new RationalNumber(0, 0);
+    product.numerator = this.numerator * other.numerator;
+    product.denominator = this.denominator * other.denominator;
+    return product;
+  }
+
 }
