@@ -105,4 +105,13 @@ public class RationalNumber extends RealNumber {
     return quotient;
   }
 
+  public RationalNumber add(RationalNumber other){
+    RationalNumber sum = new RationalNumber(0, 0);
+    sum.denominator = gcd(this.denominator, other.denominator);
+    int num1 = this.numerator * (sum.denominator / this.denominator);
+    int num2 = other.numerator * (sum.denominator / other.denominator);
+    sum.numerator = num1 + num2;
+    return sum;
+  }
+
 }
