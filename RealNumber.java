@@ -17,4 +17,9 @@ public class RealNumber{
     return true;
   }
 
+  public RealNumber add(RealNumber other){
+    this.value += other.value;
+     return null;
+  }
+
 }
