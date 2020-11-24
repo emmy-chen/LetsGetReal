@@ -19,4 +19,9 @@ public class RationalNumber extends RealNumber {
     return this.denominator;
   }
 
+  public RationalNumber reciprocal(){
+    RationalNumber reciprocal = new RationalNumber(this.numerator, this.denominator);
+    return reciprocal;
+  }
+
 }
