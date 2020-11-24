@@ -24,4 +24,8 @@ public class RationalNumber extends RealNumber {
     return reciprocal;
   }
 
+  public boolean equals(RationalNumber other){
+    return (this.numerator == other.numerator && this.denominator == other.denominator);
+  }
+
 }
