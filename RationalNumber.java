@@ -114,4 +114,13 @@ public class RationalNumber extends RealNumber {
     return sum;
   }
 
+  public RationalNumber subtract(RationalNumber other){
+    RationalNumber difference = new RationalNumber(0, 0);
+    difference.denominator = gcd(this.denominator, other.denominator);
+    int num1 = this.numerator * (difference.denominator / this.denominator);
+    int num2 = other.numerator * (difference.denominator / other.denominator);
+    difference.numerator = num1 - num2;
+    return difference;
+  }
+
 }
