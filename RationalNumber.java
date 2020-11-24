@@ -5,6 +5,21 @@ public class RationalNumber extends RealNumber {
     super(0.0);
     numerator = nume;
     denominator = deno;
+    if (deno == 0) {
+      nume = 0;
+      deno = 1;
+    }
+    else if (nume == 0){
+      denominator = 1;
+    }
+    else if (denominator < 0) {
+      denominator = denominator * (-1);
+      numerator = numerator * (-1);
+      reduce();
+    }
+    else {
+      reduce();
+    }
   }
 
   public double getValue(){
@@ -30,6 +45,44 @@ public class RationalNumber extends RealNumber {
 
   public String toString(){
     return this.numerator + "/" + this.denominator;
+  }
+
+  private static int gcd(int a, int b){
+    int gcd = 0;
+    /*
+    for(int i = 1; i <= a && i <= b; i++) {
+      if (a % i == 0 && b % i == 0) {
+        gcd = i;
+      }
+    }
+    */
+    if (a > b) {
+      for (int i = 0; i < a;) {
+        int rem = a % b;
+        if (rem == 0) {
+          gcd = rem;
+        }
+        else {
+          a = b;
+          b = rem;
+          i++;
+        }
+      }
+    }
+    else {
+      for (int i = 0; i < b;) {
+        int rem = b % a;
+        if (rem == 0) {
+          gcd = rem;
+        }
+        else {
+          b = a;
+          a = rem;
+          i++;
+        }
+      }
+    }
+    return gcd;
   }
 
 }
