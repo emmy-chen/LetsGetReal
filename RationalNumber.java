@@ -11,5 +11,8 @@ public class RationalNumber extends RealNumber {
     return (this.numerator / this.denominator);
   }
 
+  public int getNumerator(){
+    return this.numerator;
+  }
 
 }
