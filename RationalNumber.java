@@ -48,6 +48,9 @@ public class RationalNumber extends RealNumber {
   }
 
   private static int gcd(int a, int b){
+    if (a == 0 || b == 0) {
+      return 0;
+    }
     int gcd = 0;
     /*
     for(int i = 1; i <= a && i <= b; i++) {
@@ -87,8 +90,10 @@ public class RationalNumber extends RealNumber {
 
   private void reduce(){
     int gcd = gcd(this.numerator, this.denominator);
-    this.numerator = this.numerator / gcd;
-    this.denominator = this.denominator / gcd;
+    if (this.numerator != 0) {
+      this.numerator = this.numerator / gcd;
+      this.denominator = this.denominator / gcd;
+    }
   }
 
   public RationalNumber multiply(RationalNumber other){
