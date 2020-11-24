@@ -85,4 +85,10 @@ public class RationalNumber extends RealNumber {
     return gcd;
   }
 
+  private void reduce(){
+    int gcd = gcd(this.numerator, this.denominator);
+    this.numerator = this.numerator / gcd;
+    this.denominator = this.denominator / gcd;
+  }
+
 }
