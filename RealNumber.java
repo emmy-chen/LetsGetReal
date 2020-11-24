@@ -25,14 +25,20 @@ public class RealNumber{
 
   public RealNumber multiply(RealNumber other){
     RealNumber product = new RealNumber(0);
-    product.value = this.value + other.value;
+    product.value = this.value * other.value;
     return product;
   }
 
   public RealNumber divide(RealNumber other){
     RealNumber quotient = new RealNumber(0);
-    quotient.value = this.value + other.value;
+    quotient.value = this.value / other.value;
     return quotient;
+  }
+
+  public RealNumber subtract(RealNumber other){
+    RealNumber difference = new RealNumber(0);
+    difference.value = this.value - other.value;
+    return difference;
   }
 
 }
