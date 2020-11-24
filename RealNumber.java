@@ -14,12 +14,24 @@ public class RealNumber{
   }
 
   public boolean equals(RealNumber other){
-    return true;
+    return (this.value == other.value);
   }
 
   public RealNumber add(RealNumber other){
-    this.value += other.value;
-     return null;
+    RealNumber sum = new RealNumber(0);
+    sum.value = this.value + other.value;
+    return sum;
   }
+
+  public RealNumber multiply(RealNumber other){
+    RealNumber product = new RealNumber(0);
+    product.value = this.value + other.value;
+    return product;
+  }
+/*
+  public RealNumber divide(RealNumber other){
+    return (this.value /= other.value);
+  }
+  */
 
 }
