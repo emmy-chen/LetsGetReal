@@ -28,10 +28,11 @@ public class RealNumber{
     product.value = this.value + other.value;
     return product;
   }
-/*
+
   public RealNumber divide(RealNumber other){
-    return (this.value /= other.value);
+    RealNumber quotient = new RealNumber(0);
+    quotient.value = this.value + other.value;
+    return quotient;
   }
-  */
 
 }
